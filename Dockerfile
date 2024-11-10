@@ -1,14 +1,11 @@
-# Usa la imagen oficial de Go como base
+# Use an official Go 
 FROM golang:1.20
 
-# Establece el directorio de trabajo en el contenedor
-WORKDIR /app
+# Set the working directory
+WORKDIR /GOHOLAMUNDO
 
-# Copia el archivo `main.go` al contenedor
-COPY holamundo.go .
+# Copy the Go file into the container
+COPY holamundo.go /GOHOLAMUNDO/holamundo.go
 
-# Compila el programa
-RUN go build -o hola
-
-# Comando por defecto para ejecutar el programa
-CMD ["./hola"]
+# Command to run the program
+CMD ["go", "run", "holamundo.go"]
