@@ -5,7 +5,7 @@ FROM golang:1.20
 WORKDIR /app
 
 # Copia el archivo `main.go` al contenedor
-COPY main.go .
+COPY holamundo.go .
 
 # Compila el programa
 RUN go build -o hola
